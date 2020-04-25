@@ -8,8 +8,13 @@ const Counter = () => {
     //changed div to this  such to remoove extra div (can check in inspect).(div is child of object React we imported above)
     <div>
       <img src={imageURL} />
-      <span>{format(count)}</span>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <span className="badhe badge-primary m-2">{format(count)}</span>
+      <button
+        className="btn btn-secondry btn-sm"
+        onClick={() => setCount(count + 1)}
+      >
+        Increment
+      </button>
     </div>
   );
 };
