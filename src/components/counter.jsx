@@ -4,6 +4,7 @@ import React, { useState } from "react";
 const Counter = () => {
   const [count, setCount] = useState(0);
   const [imageURL, setImageURL] = useState("https://picsum.photos/200");
+  const [tags, setTag] = useState(["tag1", "tag2"]);
 
   return (
     //changed div to this  such to remoove extra div (can check in inspect).(div is child of object React we imported above)
@@ -16,6 +17,11 @@ const Counter = () => {
       >
         Increment
       </button>
+      <ul>
+        {tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
     </div>
   );
 };
