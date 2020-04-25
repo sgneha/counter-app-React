@@ -7,18 +7,15 @@ const Counter = () => {
 
   return (
     //changed div to this  such to remoove extra div (can check in inspect).(div is child of object React we imported above)
-    <div>{Tag(tags)}</div>
+    <div>
+      {tags.length === 0 && "please enter tags"}
+      <ul>
+        {tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+    </div>
   );
 };
-function Tag(tags) {
-  if (tags.length === 0) return <p>There are no tags</p>;
-  return (
-    <ul>
-      {tags.map((tag) => (
-        <li key={tag}>{tag}</li>
-      ))}
-    </ul>
-  );
-}
 
 export default Counter;
