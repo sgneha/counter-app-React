@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const [tags, setTag] = useState(["tag1", "tag2"]);
+  const [tags, setTag] = useState([]);
 
   return (
     //changed div to this  such to remoove extra div (can check in inspect).(div is child of object React we imported above)
